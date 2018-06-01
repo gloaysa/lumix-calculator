@@ -1,2 +1,37 @@
+@import "../../node_modules/nord/src/sass/nord.scss";
 
+.container {
+  height: 500px;
+  display: flex;
+  overflow: hidden;
+}
+
+.text_area, .results {
+  overflow-y: scroll;
+  padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+  box-sizing: content-box; /* So the width will be 100% + 17px */
+}
+
+.text_area {
+  background-color: $nord0;
+  width: 75%;
+  height: 100%;
+  cursor: text;
+  resize: none;
+  margin: auto;
+  &:focus {
+    outline: $nord0 none 1px;
+  }
+}
+
+.results {
+  background-color: $nord8;
+  height: 100%;
+  width: 25%;
+  margin: auto;
+}
+::-webkit-scrollbar {
+  width: 0;  /* remove scrollbar space */
+  background: transparent;  /* optional: just make scrollbar invisible */
+}
 
